@@ -165,6 +165,8 @@ while len(frq_still_to_match)>0:
 		curr_freq = float(a[4])
 		for k in frq_still_to_match:
 			if((curr_freq >= (k-eps)) and (curr_freq <= (k+eps)) and (a[1] not in obsnp_ids)):
+			#if(curr_freq >= 0.01 and a[1] not in obsnp_ids):
+			#if(a[1] not in obsnp_ids):
 				num_maf_found_dict[k] += 1
 				for osnp in mafs_to_check_dict[k]:
 					curr_file = open("{0}_observed.txt".format(osnp),'a')
